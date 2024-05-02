@@ -15,6 +15,11 @@
             return value * 1000;
         }
     };
-    console.log(kgToGm(5));
-    console.log(kgToGm("12"));
+    const resultInNumber = kgToGm(5);
+    const resultInString = kgToGm("12");
+    try {
+    }
+    catch (error) {
+        console.log(error.message);
+    }
 }
