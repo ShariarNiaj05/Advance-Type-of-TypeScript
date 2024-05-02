@@ -15,4 +15,29 @@
   const rollNumber1: GenericArray<number> = [1, 2, 3];
   const mentor1: GenericArray<string> = ["X", "Y", "Z"];
   const boolArray1: GenericArray<boolean> = [true, false];
+
+  const user: GenericArray<object> = [
+    /* Not Recommended!! Cause data type isn't possible to validate   */
+    {
+      name: "Shariar",
+      age: 101,
+    },
+    {
+      name: "Jank",
+      age: "110",
+    },
+  ];
+
+  const user2: GenericArray<{ name: string; age: number }> = [
+    /* Recommended!!   */
+
+    {
+      name: "Shariar",
+      age: 101,
+    },
+    {
+      name: "Jank",
+      age: 110,
+    },
+  ];
 }
