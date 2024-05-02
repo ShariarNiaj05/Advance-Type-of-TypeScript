@@ -20,7 +20,7 @@
   const resultInNumber = kgToGm(5) as number;
   const resultInString = kgToGm("12") as string;
 
-    // custom error message type using try catch blcok 
+  // custom error message type using try catch block
   type CustomError = {
     message: string;
   };
