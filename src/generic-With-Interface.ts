@@ -10,11 +10,13 @@
     };
     smartWatch: T;
   }
-  const poorDeveloper: Developer<{
+
+  interface AmazeFitWatch {
     brand: string;
     model: string;
     display: string;
-  }> = {
+  }
+  const poorDeveloper: Developer<AmazeFitWatch> = {
     name: "Niaj",
     computer: {
       brand: "Apple",
@@ -28,12 +30,13 @@
     },
   };
 
-  const richDeveloper: Developer<{
+  interface AppleWatch {
     brand: string;
     model: string;
     hearTrack: boolean;
     sleepTrack: boolean;
-  }> = {
+  }
+  const richDeveloper: Developer<AppleWatch> = {
     name: "Niaj",
     computer: {
       brand: "Apple",
