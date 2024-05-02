@@ -40,4 +40,22 @@
       age: 110,
     },
   ];
+
+  // Generic Tuple
+
+  type GenericTuple<X, Y> = [X, Y];
+  const manush: GenericTuple<string, string> = ["X", "Y"];
+  const userWithId: GenericTuple<
+    number,
+    {
+      name: string;
+      email: string;
+    }
+  > = [
+    123,
+    {
+      name: "Shariar",
+      email: "email@gmail.com",
+    },
+  ];
 }
