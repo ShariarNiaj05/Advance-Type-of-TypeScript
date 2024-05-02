@@ -42,16 +42,14 @@
   ];
 
   // Generic Tuple
+  interface User {
+    name: string;
+    email: string;
+  }
 
   type GenericTuple<X, Y> = [X, Y];
   const manush: GenericTuple<string, string> = ["X", "Y"];
-  const userWithId: GenericTuple<
-    number,
-    {
-      name: string;
-      email: string;
-    }
-  > = [
+  const userWithId: GenericTuple<number, User> = [
     123,
     {
       name: "Shariar",
