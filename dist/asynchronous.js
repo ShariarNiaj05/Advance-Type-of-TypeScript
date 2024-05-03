@@ -28,5 +28,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const data = yield createPromise();
         return data;
     });
-    console.log(showData());
+    const createPromise1 = () => {
+        return new Promise((resolve, reject) => {
+            const data = { something: "something" };
+            //   const data: unknown = null;
+            if (data) {
+                resolve(data);
+            }
+            else {
+                reject("Failed to load data");
+            }
+        });
+    };
+    // calling createPromise function
+    const showData1 = () => __awaiter(void 0, void 0, void 0, function* () {
+        const data = yield createPromise1();
+        return data;
+    });
+    console.log(showData1());
 }
