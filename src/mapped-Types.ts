@@ -12,15 +12,30 @@
 
   type AreaNumber = {
     height: number;
-    weight: number;
+    width: number;
   };
 
   /*  type AreaString = {
     height: string;
-    weight: string;
+    width: string;
     };
      */
-  type AreaString = {
+
+  type Height = AreaNumber["height"]; // lookup type
+
+  /* type AreaString = {
+    //mapped type
     [key in keyof AreaNumber]: string;
+  }; */
+
+  // T => { height: string; width: number }
+  type AreaString<T> = {
+    //mapped type
+    [key in keyof T]: T[key];
+  };
+
+  const area1: AreaString<{ height: string; width: number }> = {
+    height: "100",
+    width: 50,
   };
 }
