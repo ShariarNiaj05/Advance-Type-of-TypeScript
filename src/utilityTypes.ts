@@ -42,10 +42,13 @@
   const emptyObj: Record<string, unknown> = {};
     emptyObj.age = 55;
     
-  console.log(emptyObj);
+//   console.log(emptyObj);
   const obj1: MyObj = {
     a: "AA",
     b: "bb",
     c: "CC",
-  };
+    };
+    
+
+
 }
