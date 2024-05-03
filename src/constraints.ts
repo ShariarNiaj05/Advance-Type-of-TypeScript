@@ -35,5 +35,5 @@
   });
 
   //   const student3 = addCourseToStudent({ emni: "emni" });
-  const student3 = addCourseToStudent({ emni: "emni" }); //Object literal may only specify known properties, and 'emni' does not exist in type '{ id: number; name: string; email: string; }'
+  // const student3 = addCourseToStudent({ emni: "emni" }); //Object literal may only specify known properties, and 'emni' does not exist in type '{ id: number; name: string; email: string; }'
 }
