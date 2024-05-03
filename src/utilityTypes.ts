@@ -31,4 +31,21 @@
     contactNo: "5464684551",
   };
   //   person1.name = "Y"; //Cannot assign to 'name' because it is a read-only property.
+
+  // Record
+  /* type MyObj = {
+    a: string;
+    b: string;
+  }; */
+
+  type MyObj = Record<string, string>;
+  const emptyObj: Record<string, unknown> = {};
+    emptyObj.age = 55;
+    
+  console.log(emptyObj);
+  const obj1: MyObj = {
+    a: "AA",
+    b: "bb",
+    c: "CC",
+  };
 }
