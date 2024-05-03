@@ -14,7 +14,8 @@
 
 
 
-
+    // omit 
+    type contactInfo = Omit<Person, "name" | "age">
 
 
 
