@@ -9,6 +9,30 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 {
+    const getToDo = () => __awaiter(void 0, void 0, void 0, function* () {
+        const response = yield fetch("https://jsonplaceholder.typicode.com/todos/1");
+        const data = yield response.json();
+        return data;
+    });
+    console.log(getToDo());
+    const createPromise1 = () => {
+        return new Promise((resolve, reject) => {
+            const data = { something: "something" };
+            //   const data: unknown = null;
+            if (data) {
+                resolve(data);
+            }
+            else {
+                reject("Failed to load data");
+            }
+        });
+    };
+    // calling createPromise function
+    const showData1 = () => __awaiter(void 0, void 0, void 0, function* () {
+        const data = yield createPromise1();
+        return data;
+    });
+    // console.log(showData1());
     //  basic promise
     //simulate
     const createPromise = () => {
@@ -28,22 +52,5 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const data = yield createPromise();
         return data;
     });
-    const createPromise1 = () => {
-        return new Promise((resolve, reject) => {
-            const data = { something: "something" };
-            //   const data: unknown = null;
-            if (data) {
-                resolve(data);
-            }
-            else {
-                reject("Failed to load data");
-            }
-        });
-    };
-    // calling createPromise function
-    const showData1 = () => __awaiter(void 0, void 0, void 0, function* () {
-        const data = yield createPromise1();
-        return data;
-    });
-    console.log(showData1());
+    //   console.log(showData());
 }
