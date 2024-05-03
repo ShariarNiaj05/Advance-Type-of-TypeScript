@@ -6,5 +6,21 @@
     number.toString()
   );
 
-  console.log(arrayOfString);
+  //   console.log(arrayOfString);
+
+  // ---------
+
+  type AreaNumber = {
+    height: number;
+    weight: number;
+  };
+
+  /*  type AreaString = {
+    height: string;
+    weight: string;
+    };
+     */
+  type AreaString = {
+    [key in keyof AreaNumber]: string;
+  };
 }
